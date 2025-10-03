@@ -1,24 +1,87 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import { Stack } from 'expo-router';
-import { StatusBar } from 'expo-status-bar';
-import 'react-native-reanimated';
+import { Montserrat_400Regular, Montserrat_500Medium, Montserrat_600SemiBold, Montserrat_700Bold, useFonts } from "@expo-google-fonts/montserrat";
+import { Tabs } from "expo-router";
+import { ActivityIndicator, View } from "react-native";
+import "react-native-reanimated";
 
-import { useColorScheme } from '@/hooks/use-color-scheme';
+// constants
+import { colors } from "@/constants/colors";
+import { fonts } from "@/constants/fonts";
 
-export const unstable_settings = {
-  anchor: '(tabs)',
-};
+// assets
+import HomeSelected from "../assets/images/homeSelectedTab.svg";
+import HomeUnselected from "../assets/images/homeTab.svg";
+import ReportsSelected from "../assets/images/reportsSelectedTab.svg";
+import ReportsUnselected from "../assets/images/reportsTab.svg";
 
 export default function RootLayout() {
-  const colorScheme = useColorScheme();
+  const [loaded] = useFonts({
+    Montserrat_400Regular,
+    Montserrat_500Medium,
+    Montserrat_600SemiBold,
+    Montserrat_700Bold,
+  });
+
+  if (!loaded) {
+    return (
+      <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+        <ActivityIndicator size="large" color={colors.orange} />
+      </View>
+    );
+  }
 
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="modal" options={{ presentation: 'modal', title: 'Modal' }} />
-      </Stack>
-      <StatusBar style="auto" />
-    </ThemeProvider>
+    <Tabs
+      screenOptions={{
+        headerShown: false,
+        tabBarShowLabel: true,
+        tabBarActiveTintColor: colors.orange,
+        tabBarInactiveTintColor: "#6B6B6B",
+        tabBarLabelStyle: {
+          fontFamily: fonts.medium,
+          fontSize: 12,
+        },
+        tabBarStyle: {
+          backgroundColor: colors.surface,
+          borderTopColor: "#E6E6E6",
+          height: 64,
+          paddingBottom: 6,
+          paddingTop: 4,
+        },
+      }}
+    >
+      <Tabs.Screen
+        name="index"
+        options={{
+          title: "Expenses",
+          href: null,
+        }}
+      />
+
+      <Tabs.Screen
+        name="(tabs)/Home/index"
+        options={{
+          title: "Inicio",
+          tabBarIcon: ({ focused, size }) =>
+            focused ? (
+              <HomeSelected width={size} height={size} />
+            ) : (
+              <HomeUnselected width={size} height={size} />
+            ),
+        }}
+      />
+
+      <Tabs.Screen
+        name="(tabs)/Reports/index"
+        options={{
+          title: "Despesas",
+          tabBarIcon: ({ focused, size }) =>
+            focused ? (
+              <ReportsSelected width={size} height={size} />
+            ) : (
+              <ReportsUnselected width={size} height={size} />
+            ),
+        }}
+      />
+    </Tabs>
   );
 }
