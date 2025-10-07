@@ -16,4 +16,4 @@ export const styles = StyleSheet.create({
     specsView:{
         alignItems:"flex-end"
     }
-})
+}) 
