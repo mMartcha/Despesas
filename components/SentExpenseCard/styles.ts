@@ -8,7 +8,8 @@ export const styles = StyleSheet.create({
         flexDirection:'row',
         borderRadius:15,
         padding:12,
-        gap:12
+        gap:12,
+        
     },
     titleView:{
         flex:1,

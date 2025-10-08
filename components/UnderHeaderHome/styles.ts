@@ -8,7 +8,8 @@ export const styles = StyleSheet.create({
         minHeight:90,
         flexDirection:'row',
         paddingHorizontal:20,
-        gap:12
+        gap:12,
+        bottom:1
     },
     home:{
         height:50,

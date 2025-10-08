@@ -12,8 +12,8 @@ export const styles = StyleSheet.create({
         backgroundColor: '#FFD8C5',
         borderRadius: 6,
         overflow: 'hidden',
-        width:200,
-        justifyContent:'center',
+        width:"60%",
+
         
         
     },
@@ -25,7 +25,8 @@ export const styles = StyleSheet.create({
         fontSize: 10,
         color: '#fff',
         fontFamily:fonts.regular,
-        right:4
+        left:2,
+
         
         
      },

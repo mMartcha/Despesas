@@ -25,6 +25,6 @@ export const styles = StyleSheet.create({
     },
     lowerBodyView:{
         paddingTop:20,
-        paddingHorizontal:30
+        paddingHorizontal:20
     }
 })
