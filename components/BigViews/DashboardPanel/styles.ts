@@ -4,7 +4,7 @@ import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
     container: {
-      flex: 1,
+      // flex: 1,
       backgroundColor: colors.surface,
       paddingHorizontal:10,
     },
@@ -23,8 +23,10 @@ export const styles = StyleSheet.create({
     dateFilterView:{
       flexDirection: "row",
       gap: 8,
-      marginBottom: 20,
       justifyContent:"center",
+      borderBottomWidth: 0.5,
+      paddingBottom: 15,
+      borderBottomColor: '#a2a2a2ff' 
       
     },
     dateFilterButton:{

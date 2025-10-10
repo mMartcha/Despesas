@@ -34,13 +34,8 @@ export default function DashboardPanel() {
     [data.total]
   );
 
-  // opcional: espessura dinâmica se houver fatia dominante
-  const maxPercent = Math.max(...categories.map(c => c.percent));
-  const thickness = maxPercent > 25 ? 30 : 26;
-
   return (
-    <View style={[styles.container, { flex: 1 }]}>
-      {/* Cabeçalho fixo */}
+    <View style={styles.container}>
       <View style={styles.dateFilterView}>
         {([
           { key: "day", label: "Dia" },
@@ -64,14 +59,15 @@ export default function DashboardPanel() {
         })}
       </View>
 
-      <Text>Filtro:</Text>
+      <View
+        style={{backgroundColor:'#E1E1E1', height:1, width:"100%", }}
+      />
 
       <ScrollView
-        style={{ flex: 1 }}
         contentContainerStyle={{
-          paddingTop: 8,
-          paddingBottom: 24,
-          alignItems: "center", // centraliza o Donut
+          paddingTop: 12,
+          paddingBottom: 140,
+          alignItems: "center",
         }}
         showsVerticalScrollIndicator={false}
       >
@@ -80,7 +76,7 @@ export default function DashboardPanel() {
           totalLabel={PERIOD_LABEL[period]}
           totalValue={totalBRL}
           size={250}
-          thickness={thickness}
+          thickness={20}
         />
 
         <View style={{ marginTop: 16, width: "100%" }}>

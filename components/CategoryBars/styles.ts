@@ -15,17 +15,19 @@ export const styles = StyleSheet.create({
         width:"60%",
 
         
-        
     },
     fill: {
-        height: '100%'
+        height: '100%',
+        flexDirection:'row'
     },
     value: {   
         position:"absolute",
         fontSize: 10,
         color: '#fff',
         fontFamily:fonts.regular,
-        left:2,
+        alignSelf:"center"
+        
+        
 
         
         

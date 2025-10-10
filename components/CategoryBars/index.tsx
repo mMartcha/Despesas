@@ -17,7 +17,7 @@ export default function CategoryBar({label, percent, color,}:Props) {
       </View>
       
       <View style={styles.track}>
-        <View style={[styles.fill, { width: `${percent}%`, backgroundColor: color, alignItems:'flex-end', justifyContent:'center', }]} >
+        <View style={[styles.fill, { width: `${percent}%`, backgroundColor: color, alignItems:'center', justifyContent:'flex-end' }]} >
           <Text style={styles.value}>{percent}%</Text>
         </View>
       </View>

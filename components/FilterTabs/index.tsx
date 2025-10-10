@@ -12,8 +12,8 @@ import { styles } from "./styles";
 export type HomeTab = "dashboard" | "envios";
 
 type Props = {
-  value: HomeTab;              // valor atual (quem está selecionado)
-  onChange: (v: HomeTab) => void;  // função que troca o valor
+  value: HomeTab;              
+  onChange: (v: HomeTab) => void; 
 };
 
 export default function FilterTabs({ value, onChange }: Props) {

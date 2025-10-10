@@ -3,11 +3,9 @@ import { Tabs } from "expo-router";
 import { ActivityIndicator, View } from "react-native";
 import "react-native-reanimated";
 
-// constants
 import { colors } from "@/constants/colors";
 import { fonts } from "@/constants/fonts";
 
-// assets
 import HomeSelected from "../assets/images/homeSelectedTab.svg";
 import HomeUnselected from "../assets/images/homeTab.svg";
 import ReportsSelected from "../assets/images/reportsSelectedTab.svg";

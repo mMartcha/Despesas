@@ -5,8 +5,8 @@ type Props = {
   title: string;
   selected: boolean;
   onPress: () => void;
-  Icon: React.FC<any>;           // ícone normal
-  IconSelected: React.FC<any>;   // ícone quando selecionado
+  Icon: React.FC<any>;          
+  IconSelected: React.FC<any>;   
 };
 
 export default function FilterHomeButton({title,selected,onPress,Icon,IconSelected,}: Props) {
