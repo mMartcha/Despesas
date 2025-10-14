@@ -15,6 +15,7 @@ export const styles = StyleSheet.create({
     },
     expensesCardView:{
         paddingHorizontal:20,
-        paddingTop:20
+        paddingTop:12,
+        gap:10
     }
-})
+})       

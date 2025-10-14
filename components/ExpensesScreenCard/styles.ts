@@ -8,8 +8,9 @@ export const styles = StyleSheet.create({
         borderRadius:15,
         borderColor:"#C9C9C9",
         flexDirection:"row",
-        // paddingHorizontal:16, 
+        alignItems:"center",
+        
         overflow:"hidden",
-        alignItems:"center"
+        
     }
 })

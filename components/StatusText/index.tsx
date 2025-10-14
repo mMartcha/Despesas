@@ -4,12 +4,14 @@ import { styles } from "./styles";
 
 type Props = {
     statusTitle: string
+    statusBackgroundColor: string
+    statusTextColor: string
 }
 
-export default function StatusText({statusTitle}:Props) {
+export default function StatusText({statusTitle, statusBackgroundColor, statusTextColor}:Props) {
     return(
-        <View style={styles.container}>
-            <Text style={{fontFamily:fonts.semibold, fontSize:10, color: '#006FB2'}}>{statusTitle}</Text>
+        <View style={[styles.container, {backgroundColor: statusBackgroundColor}]}>
+            <Text style={{fontFamily:fonts.semibold, fontSize:10, color: statusTextColor}}>{statusTitle}</Text>
         </View>
     )
 }
