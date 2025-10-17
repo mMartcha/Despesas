@@ -1,6 +1,5 @@
 import DashboardPanel from "@/components/BigViews/DashboardPanel";
-import SentPanel from "@/components/BigViews/SentPanel";
-import FilterTabs from "@/components/FilterTabs";
+
 import HeaderHome from "@/components/HeaderHome";
 import UnderHeaderHome from "@/components/UnderHeaderHome";
 import { useState } from "react";
@@ -28,12 +27,13 @@ export default function Home() {
             <View style={styles.bodyView}>
                 <View style={styles.filterView}>
                     
-                    <FilterTabs value={tab} onChange={setTab} />
+                    {/* <FilterTabs value={tab} onChange={setTab} /> */}
 
                 </View>
 
                 <View style={styles.lowerBodyView}>
-                    {tab === "dashboard" ? <DashboardPanel /> : <SentPanel />}
+                    {/* {tab === "dashboard" ?  : <SentPanel />} */}
+                    <DashboardPanel />
                 </View>
 
             </View>

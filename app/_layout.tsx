@@ -6,6 +6,8 @@ import "react-native-reanimated";
 import { colors } from "@/constants/colors";
 import { fonts } from "@/constants/fonts";
 
+import DashboardSelected from "../assets/images/graphSelected.svg";
+import DashboardUnselected from "../assets/images/graphUnselected.svg";
 import HomeSelected from "../assets/images/homeSelectedTab.svg";
 import HomeUnselected from "../assets/images/homeTab.svg";
 import ReportsSelected from "../assets/images/reportsSelectedTab.svg";
@@ -69,7 +71,7 @@ export default function RootLayout() {
       />
 
       <Tabs.Screen
-        name="(tabs)/Reports/index"
+        name="(tabs)/Expenses/index"
         options={{
           title: "Despesas",
           tabBarIcon: ({ focused, size }) =>
@@ -80,6 +82,20 @@ export default function RootLayout() {
             ),
         }}
       />
+
+      <Tabs.Screen
+        name="(tabs)/Dashboards/index"
+        options={{
+          title: "Dashboards",
+          tabBarIcon: ({ focused, size }) =>
+            focused ? (
+              <DashboardSelected width={size} height={size} />
+            ) : (
+              <DashboardUnselected width={size} height={size} />
+            ),
+        }}
+      />
+      
     </Tabs>
   );
 }

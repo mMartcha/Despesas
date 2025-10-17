@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
     },
     track: {
         height: 20,
-        backgroundColor: '#FFD8C5',
+        backgroundColor: '#FCF0E9',
         borderRadius: 6,
         overflow: 'hidden',
         width:"60%",

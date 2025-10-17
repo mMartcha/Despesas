@@ -93,7 +93,7 @@ const ALL_EXPENSES: ExpenseItem[] = [
 ];
 
 
-export default function Reports() {
+export default function Expenses() {
   const [tab, setTab] = useState<StatusTab>("Todos");
 
   const filteredExpenses = useMemo(() => {
